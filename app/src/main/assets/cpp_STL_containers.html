@@ -1,0 +1,98 @@
+<html>
+        <style>
+                table {
+                    border-collapse: collapse;
+                }
+                
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 5px;
+                }
+                
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+                </style>
+    <body style="padding:10px !important;">
+        <h1>Containers</h1>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Container is a way that store data in organized way. Some of the containers are listed below
+            <ol>
+                <li><b>Vector:</b> Dynamic array, allows insertion and deletion at back. Direct access to any element. Iteration having <i>random access</i>. &lt;vector&gt; header file.</li>
+                <li><b>List:</b> Linear list with bidirectional, allows insertions and deletions anywhere. Iteration having <i>bidirectional</i>. &lt;list&gt; header file.</li>
+                <li><b>Deque:</b> Double ended queue, allows insetions and deletions at both ends also direct access to any element. Iteration having <i>random access</i>. &lt;deque&gt; header file.</li>
+                <li><b>Set:</b> Set helps to store unique elements, only one key of each value allowed. Iteration having <i>bidirectional</i>. &lt;set&gt; header file.</li>                
+                <li><b>Multiset:</b> Stores only the key objects, multiple key values allowed. Iteration having <i>bidirectional</i>. &lt;set&gt; header file.</li>                
+                <li><b>Map:</b> Stores unique key/value pairs. Each key associated with only one value. Allows key based lookup. Iteration having <i>bidirectional</i>. &lt;map&gt; header file.</li>
+                <li><b>Multimap:</b> Stores unique key/value pairs. Key associated with more than one value. Allows key based lookup. Iteration having <i>bidirectional</i>. &lt;map&gt; header file.</li>
+                <li><b>Stack:</b> LIFO - Last in first out. No iteration. &lt;stack&gt; header file.</li>
+                <li><b>Queue:</b> FIFO - First in first out. No iteration. &lt;queue&gt; header file.</li>
+                <li><b>Priority Queue:</b> The first element out is always the highest priority. No iteration. &lt;queue&gt; header file.</li>
+            </ol>
+            The above listed containers are categorised into following:
+            <ol>
+                <li><b>Sequence containers:</b> Sequence containers stores elements in linear sequence like sequence of books in a desk. <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One problem with C++ array is that we must specify its size at compile time, in the
+                    source code. Actually we don’t know while writing the program, how much
+                    data will be stored in the array. So we must specify an array with large memory space to store maximum amount of data. 
+                    When program runs, will either memory waste with half filling array, 
+                    or getting an error message by running memory out of range. STL provides the <b>vector</b> container to avoid these difficulties.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another problem with arrays that we are storing employee records, and arranged
+                    in alphabetical order by employee’s first name. If we want to insert a new
+                    employee whose name starts with M, we must move all employees from N to Z to make
+                    space. This can be very time-consuming. STL provides the <b>list</b> container like linked list.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The third sequence container is the <b>deque</b>, like combination of a stack
+                    and a queue. A stack, works on a last-in-first-out principle. Both input and output take place on the top of the stack. 
+                    A queue, uses a first-in-first-out arrangement: data goes in at the front and comes out at the back, like a
+                    line of customers in a bank. A deque combines these approaches so you can insert or delete
+                    data from either end. The word deque is derived from Double-Ended queue.<br><b>Advantages and disadvantages of sequence containers</b><br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><i>Container</i></th>
+                                <th><i>Advantages/Disadvantages</i></th>
+                            </tr>
+                            <tr>
+                                <td>Vector</td>
+                                <td>Fast random access. Insetion or deletion is slow in middle and fast at end.</td>
+                            </tr>
+                            <tr>
+                                <td>List</td>
+                                <td>Slow random access. Insertion or deletion is fast at any location.</td>
+                            </tr>
+                            <tr>
+                                <td>Deque</td>
+                                <td>Fast random access. Insertion or deletion is slow in middle and fast at front and end.</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                </li>
+                <li><b>Associative containers:</b> Associative containers uses keys to access data. They are not sequential, following are associative containers,
+                    <ol>
+                        <li>set</li>
+                        <li>multiset</li>
+                        <li>map</li>
+                        <li>multimap</li>
+                    </ol>
+                    These containers stores data in <i>tree</i> structure. <b>Slow</b> random access and <b>fast</b> for insertion, deletion and searching.
+                    <b>Inefficient to sort</b>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set and multiset can store a number of data items and provide operations for handling them using values(keys). For example, a set of employee class
+                    which are ordered using employee id's as keys. We can search for an employee using his id as key. The main difference between a set and multiset is 
+                    that multiset allows <b>duplicate values</b> where as set does not allow duplicate.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map and multimap are stores pairs of objects: a key and a value. We can manpulate values using keys associated with them. The values are sometimes 
+                    called mapped values. The main difference between map and multimap is that a map allow only one key for one value, where as multimap allows multiple
+                    keys.
+                    </li>
+                <li><b>Container adapters:</b> Container adapters are <b>stack, queue and priority queue.</b> Stacks, queues, and priority queues can be created from different sequence containers.</li>
+                    Here we use push and pop operations for implemention of insetion and deletion elements. These containers do not support iteraions so we cannot use
+                    this containers for data manipulation.<br>
+                    For example, a stack object that holds integer type, instantiated from the deque class:<br>
+                    stack&lt; deque&lt;int&gt; &gt; dequeStack;<br>
+                    Note about this format is that we must insert a space between the two closing angle brackets. We cannot write<br>
+                    stack&lt;deque&lt;int&gt;&gt; dequeStack;  //syntax error<br>
+                    because the compiler will interpret the &gt;&gt; as an operator
+            </ol>
+        </p>
+    </body>
+</html>

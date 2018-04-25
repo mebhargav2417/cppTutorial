@@ -1,0 +1,78 @@
+<html>
+    <body style="padding:10px !important;">
+        <h1>Example of Vector with some algorithms</h1>
+        <p>
+            #include &lt;iostream&gt;<br>
+            #include &lt;vector&gt;<br>
+            #include &lt;algorithm&gt;<br>
+            #include &lt;string&gt;<br><br>
+            
+            using namespace std;<br><br>
+            
+            int main() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;string&gt; v;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("C");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("C++");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("Java");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("Android");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("Dot net");<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.push_back("C++");<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"Vector string elements are: ";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(unsigned int j=0; j&lt;v.size();j++)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;v[j]&lt;&lt;"\t";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;endl;<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v[3] = "C#";  //replaces C# value at 3 or 2+1 position value<br><br>
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"After replacing 3rd position element, vector list becomes: ";<br><br>
+                    
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector &lt;string&gt;::iterator i = v.begin ();  //Iterating for vector v<br><br>
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (i != v.end ()){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; *i &lt;&lt; "\t";<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++i;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+            
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = find (v.begin (),v.end (), "C++");<br><br>
+            
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i != v.end ()) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int nPosition = distance (v.begin (), i);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt;endl&lt;&lt; "Value "&lt;&lt; *i;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; " found in the vector at position: " &lt;&lt; nPosition &lt;&lt; endl;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+                
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;string&gt; dupV;<br><br>
+                
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;copy(v.begin(),v.end(),back_inserter(dupV));  //copying vector v elements to vector dupV<br><br>
+                
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"Vector string elements after copying: ";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(unsigned int j=0; j&lt;dupV.size();j++)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;dupV[j]&lt;&lt;"\t";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;endl;<br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;"Vector string printing from back: ";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(!dupV.empty()){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;dupV.back()&lt;&lt;"\t";<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dupV.pop_back();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+                
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.insert(v.begin()+3,"python");// using insert()<br>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.erase(v.begin()+1);// using erase()<br>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;endl&lt;&lt;"After inseting and erasing elements in vector v are: ";<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(unsigned int j=0; j&lt;v.size();j++)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;v[j]&lt;&lt;"\t";<br>
+                    
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+            }<br><br>
+
+            <h3>Output:</h3>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector string elements are: C	C++	Java	Android	Dot net	C++	<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After replacing 3rd position element, vector list becomes: C	C++	Java	C#	Dot net	C++	<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value C++ found in the vector at position: 1 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector string elements after copying: C	C++	Java	C#	Dot net	C++	<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector string printing from back: C++	Dot net	C#	Java	C++	C	<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After inseting and erasing elements in vector v are: C	Java	python	C#	Dot net	C++	 <br>
+        </p>
+    </body>
+</html>

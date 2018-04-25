@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">C++ Tutorial</string>
+    <string name="tab_text_1">Basics</string>
+    <string name="tab_text_2">Oops</string>
+    <string name="tab_text_3">Advanced</string>
+    <string name="tab_text_4">STL</string>
+    <string name="action_about">About</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string-array name="basic_menu">
+        <item>Introduction</item>
+        <item>Oops Basic Concepts</item>
+        <item>Hello World first program</item>
+        <item>Data types</item>
+        <item>Variables</item>
+        <item>Operators</item>
+        <item>Storage Classes</item>
+        <item>Decisioin Making</item>
+        <item>Loop Types</item>
+        <item>Functions</item>
+        <item>Arrays</item>
+        <item>Pointers</item>
+        <item>Structures</item>
+        <item>Strings</item>
+        <item>Input and Output</item>
+        <item>References</item>
+        <item>Date and Time</item>
+    </string-array>
+    <string-array name="oops_menu">
+        <item>Classes</item>
+        <item>Objects</item>
+        <item>Access Specifiers</item>
+        <item>Constructor and Destructors</item>
+        <item>Data Members and Functions in classes</item>
+        <item>Function Overloading</item>
+        <item>Inline Functions</item>
+        <item>Inheritance</item>
+        <item>Virtual Functions</item>
+        <item>Abstract Classes</item>
+        <item>Virtual Destructors</item>
+        <item>Static Keyword</item>
+        <item>Const Keyword</item>
+        <item>Pointer to Members</item>
+    </string-array>
+    <string-array name="advanced_menu">
+        <item>Files</item>
+        <item>Templates</item>
+        <item>Namespaces</item>
+        <item>Dynamic Memory Allocation</item>
+        <item>Multi Threading</item>
+        <item>Signal Handling</item>
+        <item>Exception Handling</item>
+    </string-array>
+    <string-array name="stl_menu">
+        <item>Introduction</item>
+        <item>Containers</item>
+        <item>Algorithms</item>
+        <item>Iterators</item>
+    </string-array>
+    <string name="cppintro">\u0020\u0020\u0020\u0020\u0020C++ is a middle-level programming language developed by Bjarne Stroustrup at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.
+     C++ is an object oriented programming language but it is not purely object oriented because its features like friend and virtual violates some of very important features of OOPS.
+     </string>
+    <string name="title_activity_sliding">SlidingActivity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
